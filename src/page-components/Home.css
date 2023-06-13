@@ -57,8 +57,9 @@
 }
 
 .login:hover {
-    color: #fff;
-    border: 2px solid #fff;
+    color: rgb(53, 46, 46);
+    border: 2px solid  rgb(53, 46, 46);
+    background-color: #fff;
     background: transparent;
 }
 
@@ -72,6 +73,7 @@
     width: 100%;
     display: flex;
     gap: 3%;
+    cursor: pointer;
 }
 
 .image {
@@ -99,4 +101,5 @@
     border-radius: 20px;
     width: 20%;
     padding: 20px 20px;
+    cursor: pointer;
 }

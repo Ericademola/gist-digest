@@ -1,18 +1,8 @@
-.SignUp {
+/* .SignUp {
     display: block;
     color: blue;
-    /* justify-content: center; */
-    /* align-items: center; */
-}
-
-form {
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
-    border: 1px solid rgb(77, 73, 73);
-    width: 350px;
-    margin: auto;
-    /* align-items: center; */
-    /* justify-content: center; */
 }
 
 input {
@@ -21,4 +11,4 @@ input {
 
 label {
     margin-top: 20px;
-}
+} */

@@ -6,3 +6,19 @@
     font-size: xx-large;
     line-height: 0%;
 }
+
+form {
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(51, 6, 249);
+    width: 350px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+input {
+    width: 95%;
+    margin-bottom: 20px;
+    height: 30px;
+}

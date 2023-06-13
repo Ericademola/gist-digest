@@ -1,4 +1,4 @@
-import imag from './Bola-Ahmed-Tinubu-1.png';
+import imag from '../images/Bola-Ahmed-Tinubu-1.png';
 
 const HeadlineArticle = () => {
   return (

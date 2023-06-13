@@ -1,5 +1,5 @@
 //import image from './images/african-programmer.avif';
-import imag from './Bola-Ahmed-Tinubu-1.png';
+import imag from '../images/Bola-Ahmed-Tinubu-1.png';
 
 
 const HomeImages = () => {
