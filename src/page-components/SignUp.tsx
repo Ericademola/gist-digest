@@ -1,5 +1,5 @@
-import AppName from '../AppName';
-import Button from '../Button';
+import AppName from '../shared-components/AppName';
+import Button from '../shared-components/Button';
 import './SignUp.css';
 
 
@@ -20,7 +20,7 @@ const SignUp = () => {
             <br />
             <input type="text" />
             <br />
-            <Button />
+            <Button signUpName="SignUp"/>
         </form>
     </div>
   )

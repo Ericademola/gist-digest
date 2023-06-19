@@ -1,0 +1,21 @@
+.Submit_Story {
+    color: green;
+    border: none;
+    align-items: start;
+    border-radius: 7px;
+}
+
+.Submit_Story {
+    width: 90%;
+    height: 100px;
+    border-radius: 7px;
+    padding: 15px;
+    font-size: 18px;
+}
+
+input {
+    border-radius: 7px;
+    width: 92%;
+    padding: 6px;
+    font-size: large;
+}

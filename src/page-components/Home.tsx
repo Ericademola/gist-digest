@@ -1,8 +1,8 @@
 import './Home.css';
-import HomeImages from '../HomeImages';
-import HeadlineArticle from '../HeadlineArticle';
-import HomeAside from '../HomeAside';
-import NavigationBar from '../NavigationBar';
+import HomeImages from '../shared-components/HomeImages';
+import HeadlineArticle from '../shared-components/HeadlineArticle';
+import HomeAside from '../shared-components/HomeAside';
+import NavigationBar from '../shared-components/NavigationBar';
 
 
 const Home = () => {

@@ -1,18 +1,22 @@
-import Button from "../Button"
+import AppName from "../shared-components/AppName"
+import Button from "../shared-components/Button"
 
 const Login = () => {
   return (
     <div className="Login">
-        <label htmlFor="">Email Address</label>
-        <br />
-        <input type="text" />
-        <br />
-        <label htmlFor="">Password</label>
-        <br />
-        <input type="text" />
-        <br />
-        <Button />
+        <AppName />
+        <form action="">        
+            <label htmlFor="">Email Address</label>
+            <br />
+            <input type="text" />
+            <br />
+            <label htmlFor="">Password</label>
+            <br />
+            <input type="text" />
+            <br />
+            <Button loginName="Login" />
+        </form>
     </div>
   )
-}
+} 
 export default Login
