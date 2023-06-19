@@ -20,7 +20,7 @@ const SignUp = () => {
             <br />
             <input type="text" />
             <br />
-            <Button />
+            <Button signUpName="SignUp"/>
         </form>
     </div>
   )

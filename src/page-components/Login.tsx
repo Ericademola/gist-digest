@@ -14,7 +14,7 @@ const Login = () => {
             <br />
             <input type="text" />
             <br />
-            <Button />
+            <Button loginName="Login" />
         </form>
     </div>
   )

@@ -1,18 +1,55 @@
-//import image from './images/african-programmer.avif';
-import imag from '../images/Bola-Ahmed-Tinubu-1.png';
+import { useEffect, useState } from 'react';
+import posts from '../constants/posts';
 
 
 const HomeImages = () => {
+
+  let [topHeading, setTopHeading] = useState<string | undefined>(posts[0].headLine);
+  const [topImage, setTopImage] = useState<string | undefined>(posts[0].image);
+  const [topImageName, setTopImageName] = useState<string | undefined>(posts[0].imageName);
+  
+
+  useEffect(() => {
+
+    const getHeadLines: (string | undefined)[] = posts.map((topic) => (topic.headLine));
+
+    const getHeadLineImgs: (string | undefined)[] = posts.map((img) => (img.image));
+
+    const getTopImageName: (string | undefined)[] = posts.map((imgName) => (imgName.imageName));
+
+
+    function displayHeadings () {
+
+      getHeadLines.push(getHeadLines[0]);
+
+      getHeadLineImgs.push(getHeadLineImgs[0]);
+
+      getTopImageName.push(getTopImageName[0]);
+
+      setTopHeading(getHeadLines.shift());
+
+      setTopImage(getHeadLineImgs.shift());
+
+      setTopImageName(getTopImageName.shift())
+      
+      console.log(getHeadLines);
+      
+      console.log(getHeadLineImgs);
+    }
+
+    //setInterval(displayHeadings, 10000);
+
+  }, [topHeading, topImage, topImageName])
+
   return (
     <div className='landing-images'>
-        <h1>
-            Tinubu was born in Lagos into the merchant family of Abibatu Mogaji, 
-            the Ìyál'ọ́jà of Lagos. He is generally accepted in reliable sources to have been born in 1952;[2]
-            this year of birth is sometimes disputed by political opponents, who argue that he is much older. 
-            Some reliable sources note that his age has not been verified.
-        </h1>
-        <img src={imag} alt="Bola Ahmed Tinubu" />
+      <h1> 
+        {topHeading}
+      </h1>
+      <img src={topImage} alt={topImageName} />
     </div>
   )
 }
+
 export default HomeImages
+

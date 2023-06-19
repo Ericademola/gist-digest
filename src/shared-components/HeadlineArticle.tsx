@@ -1,24 +1,36 @@
-import imag from '../images/Bola-Ahmed-Tinubu-1.png';
+import { Link } from 'react-router-dom';
+import posts from '../constants/posts';
 
-const HeadlineArticle = () => {
-  return (
-    <article>
-        <div className="headlineArticle">
-            <div className='image'>
-                <img src={imag} alt="Bola Ahmed Tinubu" />
-            </div>
-            <div className='shortStory'>
-                <h3>The Main Topic</h3>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
-                </p>
-            </div>
-        </div>
-        <div className="line"></div>
-    </article>
-  )
+
+const HeadlineArticle = () => {    
+
+    return (
+        <article className='articleList'>
+            {posts.map((story) => <div key={story.id}>
+
+                <Link to={`/DetailsStory/${story.headLineURL}`} state={`${story.id}`}>
+
+                    <div className="headlineArticle">
+
+                        <div className='image'>
+                            <img src={story.image} alt={story.imageName} />
+                        </div>
+
+                        <div className='shortStory'>
+                            <h3>{story.headLine}</h3>
+                            <p>
+                                {story.mainContent}
+                            </p>
+                        </div>
+
+                    </div>
+
+                </Link>
+
+                <div className="line"></div>
+
+            </div>)}
+        </article>
+    )
 }
 export default HeadlineArticle
