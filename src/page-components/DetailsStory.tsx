@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom';
 import { Comments } from '../interfaces/comment';
 import { useState } from 'react';
 
-
+//God come help me oooo
 const DetailsStory = () => {
 
     const id = useLocation();
@@ -104,8 +104,8 @@ const DetailsStory = () => {
                         <IoIosShareAlt />
                     </span>
                     
-                    {/* <span white like>AiFillLike</span> */}
-                    {/* <span black like>AiFillDislike</span> */}
+                    <span><AiFillLike /></span>
+                    <span><AiFillDislike /></span>
                 </div>
 
                 <div className='commentPost'>

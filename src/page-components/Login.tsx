@@ -59,6 +59,7 @@ const Login = () => {
         {loginStatus ? (<p>Please input the right credentials</p>) : (<p></p>)}      
         <br />
         <Button signUpName="SignUp"/>
+        <p>sdfghjkkhgfdsdfgh</p>
       </form>
     </div>
   )
