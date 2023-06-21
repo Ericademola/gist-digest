@@ -11,11 +11,12 @@ import SubmitStory from './page-components/SubmitStory';
 function App() {
   return (
     <div className="App">
-      {/* <SubmitStory /> */}
+    {/* <SubmitStory /> */}
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/SignUp" element={<SignUp />} />
       <Route path="/Login" element={<Login />} />
+      <Route path="/SubmitStory" element={<SubmitStory />} />
       <Route path="/DetailsStory/:headLineURL" element={<DetailsStory />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

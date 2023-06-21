@@ -1,4 +1,4 @@
-.SignUp_form {
+.Login_form {
     justify-content: center;
     align-items: center;
     border: 2px solid rgb(51, 6, 249);
@@ -8,8 +8,12 @@
     border-radius: 20px;
 }
 
+.Login_form p {
+    color: red;
+}
+
 @media screen and (max-width: 600px) {
-    .SignUp_form {
+    .Login_form {
         justify-content: center;
         align-items: center;
         border: none;

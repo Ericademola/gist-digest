@@ -3,8 +3,8 @@ const HomeAside = () => {
     <aside className="HomeAside">
       <div className="ads">
         <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          This is a special column for special announcement and ads. 
+          Please patronise the blog for wider coverrage. Thanks.
         </p>
       </div>
     </aside>

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-.app-name {
+.app_name {
     text-align: center;
     color: rgb(10, 72, 186);
     font-family: 'Times New Roman', Times, serif;
@@ -10,14 +10,9 @@
     font-size: xx-large;
 }
 
-form {
-    justify-content: center;
-    align-items: center;
-    border: 2px solid rgb(51, 6, 249);
-    width: 350px;
-    margin: auto;
-    padding: 40px;
-    border-radius: 20px;
+.app_name a{
+    text-decoration: none;
+    color: rgb(10, 72, 186);
 }
 
 input {
@@ -26,6 +21,7 @@ input {
     height: 30px;
     border: 2px solid blue;
     border-radius: 6px;
+    padding: 6px;
 }
 
 .button button {
@@ -46,15 +42,6 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
-    form {
-        justify-content: center;
-        align-items: center;
-        border: none;
-        width: 350px;
-        margin: auto;
-        padding: 40px;
-        border-radius: 20px;
-    }
 
     input {
         width: 93.8%;
