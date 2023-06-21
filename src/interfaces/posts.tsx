@@ -5,7 +5,10 @@ export interface Posts {
     mainContent: string;
     moreContent?: string;
     image?: string;
-    imageName?: string;
-    author: string
+    imageTitle?: string;
+    author: string;
+    dislike: number | null;
+    like: number | null;
+    share: number | null;
 }
 

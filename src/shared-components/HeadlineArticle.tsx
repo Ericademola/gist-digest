@@ -13,7 +13,7 @@ const HeadlineArticle = () => {
                     <div className="headlineArticle">
 
                         <div className='image'>
-                            <img src={story.image} alt={story.imageName} />
+                            <img src={story.image} alt={story.imageTitle} />
                         </div>
 
                         <div className='shortStory'>

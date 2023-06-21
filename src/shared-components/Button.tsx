@@ -1,11 +1,11 @@
 const Button = (props:any) => {
 
-  const name = props.signUpName ?? props.signUpName ?? props.loginName ?? props.SubmitNews;
+  const name = props.signUpName ?? props.signUpName ?? props.loginName ?? props.SubmitNews ?? props.commentName;
 
   return (
     
     <div className="button">
-      <button>
+      <button type="submit">
         {name}
       </button>
     </div>
