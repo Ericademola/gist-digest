@@ -13,7 +13,7 @@ const DetailsStory = () => {
 
     const id = useLocation();
     
-    const fullStory = posts.find(story =>
+    const fullStory = posts.find((story: { id: number; }) =>
         story.id == id.state
     );
 
