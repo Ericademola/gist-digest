@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AppName from "../shared-components/AppName";
 import Button from "../shared-components/Button";
 import './SubmitStory.css';
 
 
 const SubmitStory = () => {
+
+  let [id, setID] = useState<number | null>(null);
+
+  useEffect(() => {
+    const json:any = localStorage.getItem('setSubmission');
+    const submissionID = JSON.parse(json);
+    id = submissionID.length + 4;
+    
+  })
 
   const [headLine, setHeadLine] = useState<string>('');
   const [mainContent, setMainContent] = useState<string>('');
@@ -20,10 +29,10 @@ const SubmitStory = () => {
 
   const handleSubmission = (e: {preventDefault: () => void}) => {
 
-    const setSubmission = []
+    const setSubmission = [];
 
     e.preventDefault();
-    const submission = {headLine, mainContent, moreContent, image, imageTitle, author, headLineURL, dislike, like, share};
+    const submission = {id, headLine, headLineURL, mainContent, moreContent, image, imageTitle, author, dislike, like, share};
     submission.headLineURL = submission.headLine.split(" ").join("-");
     console.log(submission);
     
@@ -41,6 +50,7 @@ const SubmitStory = () => {
     setLike(null)
     setDislike(null);
     setShare(null);
+    setID(null);
   }
 
 

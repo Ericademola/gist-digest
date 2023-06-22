@@ -1,8 +1,21 @@
 import { Link } from 'react-router-dom';
 import posts from '../constants/posts';
+import { useEffect } from 'react';
+import { Posts } from '../interfaces/posts';
 
 
-const HeadlineArticle = () => {    
+
+const HeadlineArticle = () => {  
+
+    let allStories: Posts[] = []
+    
+    useEffect(() => {
+        const json:any = localStorage.getItem('setSubmission');
+        const submission = JSON.parse(json);
+        allStories = submission.concat(posts)
+        console.log(allStories);
+    })
+
 
     return (
         <article className='articleList'>
