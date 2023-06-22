@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom';
 import { Comments } from '../interfaces/comment';
 import { useState } from 'react';
 
-//God come help me oooo
+
 const DetailsStory = () => {
 
     const id = useLocation();
@@ -18,14 +18,35 @@ const DetailsStory = () => {
     );
 
     const [comment, setComment] = useState<string>(''); 
-    const CommentArray: Comments[] = [];
+    // let CommentArray: any = []
+    let commenting: string | undefined;
 
     const handleComment = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        const fixComment = {comment};
-        CommentArray.push(fixComment);
-        console.log(CommentArray);
-        setComment('');
+        // let commenting = {}
+        // let comments: Comments[] = [];
+        alert("Omo I don break, as db no dey make you manage the comment section as you see am, pending on peding, na wa.") 
+        commenting =  {comment}.comment
+        console.log(comment);
+        
+        // console.log(fixComment);
+        // commenting.fixComment
+        
+        // const getJson  = localStorage.getItem('comments');
+        // console.log(getJson);
+        
+        // if (getJson !== null) {
+        //     comments = JSON.parse(getJson);
+        // }
+        // let yo = Array.from(fixComment)
+        // CommentArray = comments.push(fixComment);
+        // console.log(comments);
+        
+        // const setJson = JSON.stringify(CommentArray);
+        // let CommentArrayfgfg = localStorage.setItem('comments', setJson);
+        // console.log(setJson);
+        
+        // setComment('')
     }
 
    
@@ -40,7 +61,7 @@ const DetailsStory = () => {
             setDislike(null);
             setPostDislikes(postDislikes ? (postDislikes - 1) : postDislikes);
             setLike(1);
-            setPostLikes(postLikes ? (postLikes + 1) : postLikes);  
+            setPostLikes(postLikes ? (postLikes + 1) : postLikes);
         }else if (like === null) {
             setLike(1);
             setPostLikes(postLikes ? (postLikes + 1) : postLikes);
@@ -59,7 +80,6 @@ const DetailsStory = () => {
         } 
     }
     
-
 
     return (
         <div className="DetailsStory">
@@ -104,12 +124,15 @@ const DetailsStory = () => {
                         <IoIosShareAlt />
                     </span>
                     
-                    <span><AiFillLike /></span>
-                    <span><AiFillDislike /></span>
+                    {/* <span><AiFillLike /></span>
+                    <span><AiFillDislike /></span> */}
                 </div>
 
                 <div className='commentPost'>
-                    <p>for comments</p>
+                    <p>{comment}</p>
+                    {/* {CommentArray.map((comments: (any), index: (number)) => <div key={index}>
+                        <p>{comments.comment}</p>
+                    </div>)} */}
                 </div>
 
             </div>

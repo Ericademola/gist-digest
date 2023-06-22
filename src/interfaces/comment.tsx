@@ -1,3 +1,3 @@
 export interface Comments {
-    comment: string;
+    comment: string | number;
 }
