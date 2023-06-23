@@ -11,6 +11,7 @@ const Login = () => {
   const [loginEmail, setLoginEmail] = useState<string>('');
   const [loginPassword, setLoginPassword] = useState<string>('');
   const [loginStatus, setLoginStatus] = useState<boolean>(false);
+  const [nullMembers, setNullMembers] = useState<boolean>(false);
 
   
   const navigate = useNavigate();
@@ -22,6 +23,10 @@ const Login = () => {
 
     const json:any = localStorage.getItem('members');
     const members = JSON.parse(json);
+    if ( members === null ) {
+      setNullMembers(true);
+      return
+    }
     const currentMember = members.find((member: { signUpEmail: string; }) => member.signUpEmail === loginEmail);
     if ( currentMember === undefined ) {
       setLoginStatus(true);
@@ -56,7 +61,8 @@ const Login = () => {
           value={loginPassword}
           onChange={(e) => setLoginPassword(e.target.value)}
         />   
-        {loginStatus ? (<p>Please input the right credentials</p>) : (<p></p>)}      
+        {loginStatus && (<p>Please input the right credentials</p>) }      
+        {nullMembers && (<p>Please input the right credentials</p>) }      
         <br />
         <Button signUpName="SignUp"/>
       </form>
