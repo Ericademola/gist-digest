@@ -40,14 +40,14 @@
 }
 
 .commentPost ul {
-    background-color: rgb(187, 225, 242);
     margin: 0;
     padding: 0;
 }
 
-.commentPost li {
-    list-style: none;
-    padding: .5% 0;
+.commentPost .comment {
+    padding: .5% 2%;
+    background-color: rgb(187, 225, 242);
     border-bottom: solid 1px black;
     margin-bottom: 2%;
+    border-radius: 10px 10px 0 0;
 }

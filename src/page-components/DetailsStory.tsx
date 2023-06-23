@@ -115,11 +115,11 @@ const DetailsStory = () => {
                 </div>
 
                 <div className='commentPost'>
-                    <p>{comment}</p>
+                    <div className='comment'>{comment}</div>
                     <ul>
-                        {comments && comments.map((comment) => <li key={comment}>
+                        {comments && comments.map((comment) => <div key={comment} className='comment'>
                             {comment}
-                        </li>)}
+                        </div>)}
                     </ul>
                 </div>
 

@@ -6,28 +6,30 @@ import { Posts } from '../interfaces/posts';
 
 const HeadlineArticle = () => { 
 
-    useEffect(() => {
+    //yet to fit the localStorage recovery
 
-        const storage: Posts[] = posts;
-        const setJson = JSON.stringify(storage);        
-        localStorage.setItem('news', setJson);
-        console.log('hi');
+    // useEffect(() => {
+
+    //     const storage: Posts[] = posts;
+    //     const setJson = JSON.stringify(storage);        
+    //     localStorage.setItem('news', setJson);
+    //     console.log('hi');
         
 
-    }, []);
+    // }, []);
 
 
     // let retrieve: Posts[] | undefined = [];
 
-    let [retrieve, setRetrieve] = useState<Posts[]>([])
+    // let [retrieve, setRetrieve] = useState<Posts[]>([])
 
-    useEffect(() => {
+    // useEffect(() => {
  
-        const json:any = localStorage.getItem('news');
-        setRetrieve = JSON.parse(json);
-        console.log(retrieve);
+    //     const json:any = localStorage.getItem('news');
+    //     setRetrieve = JSON.parse(json);
+    //     console.log(retrieve);
         
-    })
+    // })
 
 
     return (
