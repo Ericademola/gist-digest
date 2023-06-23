@@ -14,7 +14,7 @@ const posts: Posts[] = [
         dislike: 59,
         like: 17,
         share: 5,
-        comments: ["Tinubu is working", "Wetin be say Tinnbu is work, no Nigeria go soon a happen to you", "Obi is coming me I sha know", "Please buy what am selling ooooooooo"]
+        comments: ["Tinubu is working", "Wetin be say Tinubu is working, no Nigeria go soon a happen to you", "Obi is coming me I sha know", "Please buy what am selling ooooooooo"]
     },
     {
         id: 2,

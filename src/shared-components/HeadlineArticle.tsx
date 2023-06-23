@@ -1,23 +1,33 @@
 import { Link } from 'react-router-dom';
 import posts from '../constants/posts';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Posts } from '../interfaces/posts';
-import useSetDb from '../db/useSetDb';
-import useGetDb from '../db/useGetDb';
 
 
+const HeadlineArticle = () => { 
+
+    useEffect(() => {
+
+        const storage: Posts[] = posts;
+        const setJson = JSON.stringify(storage);        
+        localStorage.setItem('news', setJson);
+        console.log('hi');
+        
+
+    }, []);
 
 
-const HeadlineArticle = () => {  
+    // let retrieve: Posts[] | undefined = [];
 
-    // let allStories: Posts[] = []
-    
-    // useEffect(() => {
-    //     const json:any = localStorage.getItem('setSubmission');
-    //     const submission = JSON.parse(json) ?? [];
-    //     allStories = submission.concat(posts)
-    //     console.log(allStories);
-    // })
+    let [retrieve, setRetrieve] = useState<Posts[]>([])
+
+    useEffect(() => {
+ 
+        const json:any = localStorage.getItem('news');
+        setRetrieve = JSON.parse(json);
+        console.log(retrieve);
+        
+    })
 
 
     return (
