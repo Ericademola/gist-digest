@@ -34,7 +34,6 @@ const SubmitStory = () => {
     e.preventDefault();
     const submission = {id, headLine, headLineURL, mainContent, moreContent, image, imageTitle, author, dislike, like, share};
     submission.headLineURL = submission.headLine.split(" ").join("-");
-    console.log(submission);
     
     setSubmission.push(submission);
     const json = JSON.stringify(setSubmission);
