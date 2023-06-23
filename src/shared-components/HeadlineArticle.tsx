@@ -1,20 +1,35 @@
 import { Link } from 'react-router-dom';
 import posts from '../constants/posts';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Posts } from '../interfaces/posts';
 
 
+const HeadlineArticle = () => { 
 
-const HeadlineArticle = () => {  
+    //yet to fit the localStorage recovery
 
-    let allStories: Posts[] = []
-    
-    useEffect(() => {
-        const json:any = localStorage.getItem('setSubmission');
-        const submission = JSON.parse(json);
-        allStories = submission.concat(posts)
-        console.log(allStories);
-    })
+    // useEffect(() => {
+
+    //     const storage: Posts[] = posts;
+    //     const setJson = JSON.stringify(storage);        
+    //     localStorage.setItem('news', setJson);
+    //     console.log('hi');
+        
+
+    // }, []);
+
+
+    // let retrieve: Posts[] | undefined = [];
+
+    // let [retrieve, setRetrieve] = useState<Posts[]>([])
+
+    // useEffect(() => {
+ 
+    //     const json:any = localStorage.getItem('news');
+    //     setRetrieve = JSON.parse(json);
+    //     console.log(retrieve);
+        
+    // })
 
 
     return (
@@ -46,4 +61,4 @@ const HeadlineArticle = () => {
         </article>
     )
 }
-export default HeadlineArticle
+export default HeadlineArticle;

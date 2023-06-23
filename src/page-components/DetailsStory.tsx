@@ -5,7 +5,6 @@ import {  IoIosShareAlt } from "react-icons/io"
 import Button from '../shared-components/Button';
 import posts from '../constants/posts';
 import { useLocation } from 'react-router-dom';
-import { Comments } from '../interfaces/comment';
 import { useState } from 'react';
 
 
@@ -17,36 +16,16 @@ const DetailsStory = () => {
         story.id == id.state
     );
 
+    const comments = fullStory?.comments
+
     const [comment, setComment] = useState<string>(''); 
-    // let CommentArray: any = []
     let commenting: string | undefined;
 
     const handleComment = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        // let commenting = {}
-        // let comments: Comments[] = [];
-        alert("Omo I don break, as db no dey make you manage the comment section as you see am, pending on peding, na wa.") 
+        alert("The commenting function is under construction.") 
         commenting =  {comment}.comment
-        console.log(comment);
         
-        // console.log(fixComment);
-        // commenting.fixComment
-        
-        // const getJson  = localStorage.getItem('comments');
-        // console.log(getJson);
-        
-        // if (getJson !== null) {
-        //     comments = JSON.parse(getJson);
-        // }
-        // let yo = Array.from(fixComment)
-        // CommentArray = comments.push(fixComment);
-        // console.log(comments);
-        
-        // const setJson = JSON.stringify(CommentArray);
-        // let CommentArrayfgfg = localStorage.setItem('comments', setJson);
-        // console.log(setJson);
-        
-        // setComment('')
     }
 
    
@@ -54,16 +33,22 @@ const DetailsStory = () => {
     const [postDislikes, setPostDislikes] = useState<number | null | undefined>(fullStory?.dislike);
     const [like, setLike] = useState<number | null>(null);
     const [dislike, setDislike] = useState<number | null>(null);
+    const [showLike, setShowLike] = useState<boolean>(false);
+    const [showdislike, setShowDislike] = useState<boolean>(false);
+
 
 
     const addLike = () => {
         if (dislike === 1) {
             setDislike(null);
+            setShowDislike(false);
             setPostDislikes(postDislikes ? (postDislikes - 1) : postDislikes);
             setLike(1);
+            setShowLike(true);
             setPostLikes(postLikes ? (postLikes + 1) : postLikes);
         }else if (like === null) {
             setLike(1);
+            setShowLike(true);
             setPostLikes(postLikes ? (postLikes + 1) : postLikes);
         }
     }
@@ -71,11 +56,14 @@ const DetailsStory = () => {
     const addDislike = () => {
         if (like === 1) {
             setLike(null);
+            setShowLike(false);
             setPostLikes(postLikes ? (postLikes - 1) : postLikes);
             setDislike(1);
+            setShowDislike(true);
             setPostDislikes(postDislikes ? (postDislikes + 1) : postDislikes);
         }else if (dislike === null) {
-            setDislike(1)
+            setDislike(1);
+            setShowDislike(true);
             setPostDislikes(postDislikes ? (postDislikes + 1) : postDislikes);
         } 
     }
@@ -111,12 +99,12 @@ const DetailsStory = () => {
                 <div className='icons'>
                     <span className='icon' onClick={addLike}>
                         <span className='icon-name'>Like </span>
-                        <AiOutlineLike />
+                        {showLike ? (<AiFillLike />) : (<AiOutlineLike />) }
                         {postLikes}
                     </span>
                     <span className='icon' onClick={addDislike}>
                         <span className='icon-name'>Dislike </span>
-                        <AiOutlineDislike />
+                        {showdislike ? (<AiFillDislike />) : (<AiOutlineDislike />) }
                         {postDislikes}
                     </span>
                     <span className='icon'>
@@ -124,15 +112,15 @@ const DetailsStory = () => {
                         <IoIosShareAlt />
                     </span>
                     
-                    {/* <span><AiFillLike /></span>
-                    <span><AiFillDislike /></span> */}
                 </div>
 
                 <div className='commentPost'>
-                    <p>{comment}</p>
-                    {/* {CommentArray.map((comments: (any), index: (number)) => <div key={index}>
-                        <p>{comments.comment}</p>
-                    </div>)} */}
+                    <div className='comment'>{comment}</div>
+                    <ul>
+                        {comments && comments.map((comment) => <div key={comment} className='comment'>
+                            {comment}
+                        </div>)}
+                    </ul>
                 </div>
 
             </div>
