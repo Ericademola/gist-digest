@@ -10,5 +10,6 @@ export interface Posts {
     dislike: number | null;
     like: number | null;
     share: number | null;
+    comments?: string[] | null
 }
 
