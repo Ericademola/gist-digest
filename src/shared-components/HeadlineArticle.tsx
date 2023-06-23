@@ -2,19 +2,22 @@ import { Link } from 'react-router-dom';
 import posts from '../constants/posts';
 import { useEffect } from 'react';
 import { Posts } from '../interfaces/posts';
+import useSetDb from '../db/useSetDb';
+import useGetDb from '../db/useGetDb';
+
 
 
 
 const HeadlineArticle = () => {  
 
-    let allStories: Posts[] = []
+    // let allStories: Posts[] = []
     
-    useEffect(() => {
-        const json:any = localStorage.getItem('setSubmission');
-        const submission = JSON.parse(json);
-        allStories = submission.concat(posts)
-        console.log(allStories);
-    })
+    // useEffect(() => {
+    //     const json:any = localStorage.getItem('setSubmission');
+    //     const submission = JSON.parse(json) ?? [];
+    //     allStories = submission.concat(posts)
+    //     console.log(allStories);
+    // })
 
 
     return (
@@ -46,4 +49,4 @@ const HeadlineArticle = () => {
         </article>
     )
 }
-export default HeadlineArticle
+export default HeadlineArticle;

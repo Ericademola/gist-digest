@@ -13,7 +13,8 @@ const posts: Posts[] = [
         author: "Bola Davids",
         dislike: 59,
         like: 17,
-        share: 5
+        share: 5,
+        comments: ["Tinubu is working", "Wetin be say Tinnbu is work, no Nigeria go soon a happen to you", "Obi is coming me I sha know", "Please buy what am selling ooooooooo"]
     },
     {
         id: 2,
@@ -26,7 +27,8 @@ const posts: Posts[] = [
         author: "Bukola Davids",
         dislike: 91,
         like: 73,
-        share: 25
+        share: 25,
+        comments: ["May God help the Ekweremadus in this trying times", "Ahaaa, this oyinbo people bad o", "Waw, this is a working system, not like what we have here", "I sincerely wish the girl in question get well soon, at least for all the trouble of her parents"]
     },
     {
         id: 3,
@@ -39,7 +41,8 @@ const posts: Posts[] = [
         author: "Bukola Obi",
         dislike: 13,
         like: 19,
-        share: 9
+        share: 9,
+        comments: ["This is shocking oooo", "RIP legend", "RIP", "Good bye Saint Obi, we will miss you"]
     },
     {
         id: 4,
@@ -52,7 +55,8 @@ const posts: Posts[] = [
         author: "Dayo Adaobi",
         dislike: 10,
         like: 53,
-        share: 14
+        share: 14,
+        comments: ["Meghan, oya now come dey chop fufu", "Welcome home princess, I here by name you Adeola", "Nice one, abeg quick run UK visa for you people for 9ja now", "Waw, so we have a Nigerian british royals"]
     }
 ];
 
